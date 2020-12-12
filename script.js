@@ -46,20 +46,14 @@ function scrollbarWidth() {
 }
 
 for (let j = 0; j < sideElems.length; j++) {
-    sideElems[j].addEventListener('click', event => {
-        event.preventDefault();
+    achievElem.addEventListener('click', event=>{
         for (let i=0;i< modalWindowImgElems.length;i++){
-        modalWindowImgElems[i].style.display = 'none';
-        }
-        achievElem
-            .classList
-            .remove('visible');
-            document.body.classList.remove('overflow_hidden');
-            document.body.style.paddingRight = "0";
+            modalWindowImgElems[i].style.display = 'none';
+            }
+            achievElem
+                .classList
+                .remove('visible');
+                document.body.classList.remove('overflow_hidden');
+                document.body.style.paddingRight = "0";
     })
 }
-
-// sideElem.addEventListener('click', event => {  event.preventDefault();
-// achievElem.classList.remove('visible'); }) for (let i=0; i<=sideElem.length;
-// i++){  sideElem[i].addEventListener('click', event => {
-// event.preventDefault();   achievElem.classList.remove('visible');  }) }
