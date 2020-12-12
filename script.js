@@ -45,7 +45,7 @@ function scrollbarWidth() {
     return scrollbarWidth;
 }
 
-for (let j = 0; j < sideElems.length; j++) {
+
     achievElem.addEventListener('click', event=>{
         for (let i=0;i< modalWindowImgElems.length;i++){
             modalWindowImgElems[i].style.display = 'none';
@@ -56,4 +56,3 @@ for (let j = 0; j < sideElems.length; j++) {
                 document.body.classList.remove('overflow_hidden');
                 document.body.style.paddingRight = "0";
     })
-}
