@@ -392,7 +392,8 @@ iframe {
 }
 
 .modal-wrapper {
-    top: 0;
+    top: 50vh;
+    left: 50vw;
     display: none;
     position: fixed;
     width: 100vw;
