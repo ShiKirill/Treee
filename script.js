@@ -80,3 +80,33 @@ function scrollbarWidth() {
                 document.body.classList.remove('overflow_hidden');
                 document.body.style.paddingRight = "0";
     })
+
+const params = {
+        amount: 20,
+        size: {
+            min: 5,
+            max: 15
+        },
+        duration: {
+            min: 2,
+            max: 4,
+        }
+        }
+        const randomBetween = (a, b) => {
+        return (a + (Math.random() * (b - a)));
+        }
+        
+        for (let i = 0; i < params.amount; i++) {
+        let star = $("<div></div>");
+        let size = Math.round(Math.random() * 10) === 0 ? params.size.giant : randomBetween(params.size.min, params.size.max);
+        star.css({
+            "width": size + "px",
+            "height": size + "px",
+            "left": randomBetween(0, 100) + "%",
+            "top": randomBetween(0, 100) + "%",
+            "box-shadow": "0 0 " + size + "px " + size / 2 + "px #eeeb02",
+            "animation-duration": randomBetween(params.duration.min, params.duration.max) + "s"
+        });
+        
+        $(".blinks").append(star);
+        }
