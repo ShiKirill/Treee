@@ -6,6 +6,30 @@ const igrushkaElems = document.querySelectorAll('.igrushka');
 const modalWindowImgElems = document.querySelectorAll('.modal_window');
 const navWidth = scrollbarWidth();
 
+const KananPhoto = document.querySelector('.Kanan-photo');
+const ElenaPhoto = document.querySelector('.Chuguy-photo');
+const treeTop = document.querySelector('.tree-top-1');
+const treeMid = document.querySelector('.tree-top-2');
+const treeBot = document.querySelector('.tree-top-3');
+
+treeMid.addEventListener('click', event =>{
+    ElenaPhoto.classList.toggle('visible');
+})
+
+treeBot.addEventListener('click', event =>{
+    KananPhoto.classList.toggle('visible');
+})
+
+document.addEventListener('click', event => {
+    let target = event.target;
+    const its_Kanan = target == treeBot;
+    const its_Elena = target == treeMid;
+    if (!its_Kanan && !its_Elena){
+    KananPhoto.classList.remove('visible');
+    ElenaPhoto.classList.remove('visible');
+    }
+})
+
 
 for (let i = 0; i < igrElems.length; i++) {
     igrElems[i].addEventListener('mouseover', event => {
