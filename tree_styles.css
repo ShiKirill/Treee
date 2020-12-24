@@ -403,9 +403,10 @@
 }
 
 .message-tree-top-second{
+    height: 8%;
     width: 40%;
-    left: 53%;
-    top: 0%;
+    left: 54%;
+    top: -2%;
 }
 
 .message-tree-top-third{
